@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+}
+
+#q-wrap {
+    /*position: absolute;*/
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -khtml-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+#questions {
+    margin: 100px 0;
+    width: 80%;
+    height: 240px;
+    border: 3px dotted #b050c1;
+    border-radius: 15px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+}
+
+#questions .inner-block {
+
+    width: 70%;
+    height: 75px;
+    /*margin: 20px 0;*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+}
+
+
+#questions #consult {
+    position: relative;
+}
+
+#questions .front, #questions .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1.25s ease;
+    backface-visibility: hidden;
+    background-color: #f8f8f8;
+}
+
+#questions .back {
+    transform: rotateX(180deg);
+}
+
+#consult {
+    perspective: 1000px;
+}
+
+#questions #consult {
+    bottom: -60px;
+}
+
+#questions #etik,
+#questions #chSize,
+#questions #personData,
+#questions #successData,
+#questions #happ,
+#questions #personPrint,
+#questions #personDelivery {
+    border: 1px solid;
+    top: 45px;
+}
+
+#questions label {
+    margin: 0;
+    padding: 0 15px;
+}
+
+#questions #chSize select {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#questions input {
+    width: 150px;
+    padding: 0 10px;
+}
+
+#questions input[type=checkbox] {
+    width: 15px;
+}
+
+#questions button {
+    margin-left: 20px;
+}
+
+#steps {
+    position: absolute;
+    top: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+#personPrint {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+#steps span {
+    border: 1px solid;
+    display: block;
+    width: 25px;
+    height: 25px;
+    line-height: 21px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 5px;
+    opacity: 0;
+    -webkit-transition: .75s ease 0.2s;
+    -moz-transition: .75s ease 0.2s;
+    -o-transition: .75s ease 0.2s;
+    transition: .75s ease 0.2s;
+}
+
+#steps span.active {
+    background-color: #b050c1;
+    color: #fff;
+    display: inline-block;
+    opacity: 1;
+}
+
+#successData {
+    background-color: green;
+    color: #fff;
+}
+
+.tooltip {
+    position: absolute;
+    z-index: 999;
+    left: -9999px;
+    background-color: #b050c1;
+    padding: 5px;
+    /*border:1px solid #fff;*/
+    width: 200px;
+}
+
+.tooltip p {
+    margin: 0;
+    color: #fff;
+    font-size: 17px;
+    /*background-color:#222;*/
+    text-align: center;
+    padding: 2px 7px;
+}
+
+.tooltip p strong {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.my_radio_buttons div {
+    margin: 0 10px;
+}
+
+.my_radio_buttons {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.my_radio_buttons div {
+    float: left;
+}
+
+.my_radio_buttons input {
+    position: absolute;
+    left: -9999px;
+}
+
+#questions .my_radio_buttons label, #personNext {
+    display: block;
+    margin: 0 0 0 -1px;
+    padding: 5px 20px;
+    border: 1px solid #BBBBBB;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(229, 229, 229, 1) 100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .12);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.my_radio_buttons input:checked + label {
+    background: white;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, .2);
+}
+
+#questions #personPrint label[for=printOne] {
+    background: #EECFBA;
+}
+
+#questions #personPrint label[for=printTwo] {
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+}
+
+#questions #personPrint label[for=printThree] {
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8, deepskyblue);
+}
+
+#questions #personPrint label[for=printFour] {
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8, deepskyblue, yellow);
+}
+
+#questions #personPrint label[for=printFive] {
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8, deepskyblue, yellow, powderblue);
+}
+
+#questions #personPrint label[for=printSix] {
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8, deepskyblue, yellow, powderblue, pink);
+}
+
+#questions #personPrint label[for=printSeven] {
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8, deepskyblue, yellow, powderblue, pink, #FFF9ED);
+}
+
+#questions #personPrint label[for=printEight] {
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8, deepskyblue, yellow, powderblue, pink, #FFF9ED, white);
+}
+
+@media screen and (max-width: 1024px) {
+    #questions {
+        width: 96%;
+    }
+
+    #questions .inner-block {
+        width: 96%;
+    }
+}
+@media screen and (max-width: 767px) {
+    #questions {
+        width: 98%;
+    }
+
+    #questions .inner-block {
+        width: 98%;
+    }
+}

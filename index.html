@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="questions.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/questions.js"></script>
+</head>
+
+<body>
+<div id="q-wrap">
+  <div id="questions">
+    <div id="steps">
+      <span class="stOne">1</span>
+      <span class="stTwo">2</span>
+      <span class="stThree">3</span>
+      <span class="stFour">4</span>
+      <span class="stFive">5</span>
+      <span class="stSix">6</span>
+    </div>
+    <div class="inner-block " id="etik"><span>Нужны этикетки ?</span></div>
+    <div class="inner-block  my_radio_buttons" id="happ" style="display: none;">
+      <span>Обращались раньше в нашу фирму ?</span>
+      <div>
+        <label for="radioYes">Да</label>
+        <input type="radio" name="happ" value="Да" form="personaForm" id="radioYes">
+      </div>
+      <div>
+        <label for="radioNo">Нет</label>
+        <input type="radio" name="happ" value="Нет" form="personaForm" id="radioNo">
+      </div>
+    </div>
+    <div class="inner-block" id="chSize" style="display: none;">
+      <label for="etikSize">Выберите размер:</label>
+      <select name="size[]" id="etikSize" form="personaForm">
+        <option value="200x200x222">200x200x111</option>
+        <option value="200x200x222">200x200x222</option>
+        <option value="200x200x222">200x200x333</option>
+      </select>
+      <label for="checkSize">Несколько размеров</label><input type="checkbox" name="chekSize" id="checkSize">
+      <button id="personNext">Дальше</button>
+    </div>
+    <div class="inner-block my_radio_buttons" id="personDelivery" style="display: none;">
+      <span>Нужна ли вам доставка ?</span>
+      <div>
+        <label for="deliveryYes">Да</label>
+        <input type="radio" name="delivery" value="Да" form="personaForm" id="deliveryYes">
+      </div>
+      <div>
+        <label for="deliveryNo">Нет(будет самовывоз)</label>
+        <input type="radio" name="delivery" value="Нет(будет самовывоз)" form="personaForm" id="deliveryNo">
+      </div>
+    </div>
+    <div class="inner-block my_radio_buttons" id="personPrint" style="display: none;">
+      <div style="padding-bottom: 5px;">Нужна ли печать на данных этикетках ?(укажите количество цветов)</div>
+      <div class="my-colors-group">
+        <div>
+          <label for="printNo">Нет</label>
+          <input type="radio" name="print" value="Нет" form="personaForm" id="printNo">
+        </div>
+        <div>
+          <label for="printOne">1</label>
+          <input type="radio" name="print" value="1 цвет" form="personaForm" id="printOne">
+        </div>
+        <div>
+          <label for="printTwo">2</label>
+          <input type="radio" name="print" value="2 цвета" form="personaForm" id="printTwo">
+        </div>
+        <div>
+          <label for="printThree">3</label>
+          <input type="radio" name="print" value="3 цвета" form="personaForm" id="printThree">
+        </div>
+        <div>
+          <label for="printFour">4</label>
+          <input type="radio" name="print" value="4 цвета" form="personaForm" id="printFour">
+        </div>
+        <div>
+          <label for="printFive">5</label>
+          <input type="radio" name="print" value="5 цветов" form="personaForm" id="printFive">
+        </div>
+        <div>
+          <label for="printSix">6</label>
+          <input type="radio" name="print" value="6 цветов" form="personaForm" id="printSix">
+        </div>
+        <div>
+          <label for="printSeven">7</label>
+          <input type="radio" name="print" value="7 цветов" form="personaForm" id="printSeven">
+        </div>
+        <div>
+          <label for="printEight">8 (Под заказ)</label>
+          <input type="radio" name="print" value="8 цветов" form="personaForm" id="printEight">
+        </div>
+      </div>
+    </div>
+    <div class="inner-block" id="personData" style="display: none;">
+      <form action="" method="post" id="personaForm">
+        <label for="personData">Имя</label><input type="text" name="personName" id="personName" placeholder="Имя"
+                                                  required>
+        <label for="personPhone">Телефон</label><input type="tel" name="personPhone" id="personPhone"
+                                                       placeholder="Телефон" required>
+        <button type="submit" id="personSend">Отправить</button>
+      </form>
+    </div>
+    <div class="inner-block" id="successData" style="display: none;">
+      <span>Ваша завяка принята. Наши менеджеры свяжутся с вами.</span>
+    </div>
+    <div class="inner-block " id="consult">
+      <div class="front">Хочу консультацию !</div>
+      <div class="back">Телефон: <a href="tel:7(999)999-99-99">&nbsp;+7(999)999-99-99 </a>&nbsp; Email:&nbsp; <a
+          href="mailto:help@gmail.com">help@gmail.com</a></div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
