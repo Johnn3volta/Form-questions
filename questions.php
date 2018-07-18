@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['data'])){
         'Имя'                   => $name,
         'Телефон'               => $phone,
         'Уже обращался в фирму' => $happ,
-        'Цвет'                  => $colors,
+        'Цветa'                 => $colors,
         'Размер'                => $size,
         'Доставка'              => $delivery,
     ];
@@ -37,6 +37,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['data'])){
     $headers .= "Content-type: text/html; charset=utf-8\r\n"; // кодировка письма
     $headers .= "From: $siteName <{$adminEmail}>\r\n"; // от кого письмо
 
-    mail($to, $form_subject, $message, $headers);;
+    mail($to, $form_subject, $message, $headers);
+
+    print_r($_POST);
 
 }

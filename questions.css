@@ -13,7 +13,6 @@ body {
     -moz-justify-content: center;
     -ms-justify-content: center;
     -o-justify-content: center;
-    -khtml-justify-content: center;
     justify-content: center;
     -webkit-align-items: center;
     align-items: center;
@@ -35,6 +34,18 @@ body {
     position: relative;
 }
 
+#questions #question-text {
+    position: absolute;
+    top: -70px;
+    width: 320px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    font-size: 18px;
+}
+
 #questions .inner-block {
 
     width: 70%;
@@ -45,7 +56,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     position: absolute;
 }
 
@@ -73,12 +83,10 @@ body {
     transform: rotateX(180deg);
 }
 
-#consult {
-    perspective: 1000px;
-}
-
 #questions #consult {
     bottom: -60px;
+    cursor: pointer;
+    perspective: 1000px;
 }
 
 #questions #etik,
@@ -200,7 +208,7 @@ body {
     left: -9999px;
 }
 
-#questions .my_radio_buttons label, #personNext {
+#questions .my_radio_buttons label, #personNext, #etik button,#personSend {
     display: block;
     margin: 0 0 0 -1px;
     padding: 5px 20px;
@@ -209,6 +217,9 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, .12);
     cursor: pointer;
     border-radius: 5px;
+}
+#personSend {
+    display: inline-flex;
 }
 
 .my_radio_buttons input:checked + label {

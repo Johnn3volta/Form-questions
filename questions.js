@@ -1,33 +1,34 @@
 jQuery(document).ready(function ($) {
 
 
-    $('#etik').click(function () {
+    $('#etik button').click(function () {
         $('#steps span').css('opacity', 1);
-        $(this).hide();
+        $(this).parent().hide();
+        $('#question-text').text('Обращались раньше в нашу фирму ?');
         $('#happ').fadeIn('slow', 'swing');
-        setTimeout(function () {
-            $('#steps .stOne').addClass('active');
-        }, 100)
+        $('#steps .stOne').addClass('active');
 
     });
-    $('#happ input').on('change',function () {
+
+    $('#happ input').on('change', function () {
         $(this).parents('#happ').hide();
+        $('#question-text').text('Выберите размер:');
         $('#chSize').fadeIn('slow', 'swing');
-        setTimeout(function () {
-            $('#steps .stTwo').addClass('active');
-        }, 100)
+        $('#steps .stTwo').addClass('active');
 
     });
 
     $('#personNext').click(function () {
         $('#steps .stThree').addClass('active');
         $(this).parent().hide();
+        $('#question-text').text('Нужна ли вам доставка ?');
         $('#personDelivery').fadeIn(300, 'swing');
     });
 
     $('#personDelivery input').on('change',function () {
         $('#steps .stFour').addClass('active');
         $(this).parents('#personDelivery').hide();
+        $('#question-text').html("Нужна ли печать на данных этикетках ? \n (укажите количество цветов)").css('text-align','center');
         $('#personPrint').fadeIn('slow', 'swing');
 
 
@@ -35,6 +36,7 @@ jQuery(document).ready(function ($) {
     $('#personPrint input').on('change',function () {
         $('#steps .stFive').addClass('active');
         $(this).parents('#personPrint').hide();
+        $('#question-text').text('Укажите свое имя и телефон.');
         $('#personData').fadeIn('slow', 'swing');
     });
 
@@ -54,8 +56,10 @@ jQuery(document).ready(function ($) {
             };
         $.post('questions.php', {data: inf}).done(function (data) {
             form.parent().hide();
+            $('#question-text').hide();
             $('#steps .stSix').addClass('active');
             $('#successData').fadeIn('slow', 'swing');
+            console.log(data);
         })
     });
     $('#consult').click(function () {

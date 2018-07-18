@@ -11,6 +11,7 @@
 <body>
 <div id="q-wrap">
   <div id="questions">
+    <div id="question-text">Нужны этикетки ?</div>
     <div id="steps">
       <span class="stOne">1</span>
       <span class="stTwo">2</span>
@@ -19,9 +20,10 @@
       <span class="stFive">5</span>
       <span class="stSix">6</span>
     </div>
-    <div class="inner-block " id="etik"><span>Нужны этикетки ?</span></div>
+    <div class="inner-block " id="etik">
+      <button type="button">Да</button>
+    </div>
     <div class="inner-block  my_radio_buttons" id="happ" style="display: none;">
-      <span>Обращались раньше в нашу фирму ?</span>
       <div>
         <label for="radioYes">Да</label>
         <input type="radio" name="happ" value="Да" form="personaForm" id="radioYes">
@@ -32,28 +34,26 @@
       </div>
     </div>
     <div class="inner-block" id="chSize" style="display: none;">
-      <label for="etikSize">Выберите размер:</label>
-      <select name="size[]" id="etikSize" form="personaForm">
+      <select name="size" id="etikSize" form="personaForm" title="Размер">
         <option value="200x200x222">200x200x111</option>
         <option value="200x200x222">200x200x222</option>
         <option value="200x200x222">200x200x333</option>
       </select>
-      <label for="checkSize">Несколько размеров</label><input type="checkbox" name="chekSize" id="checkSize">
+
       <button id="personNext">Дальше</button>
     </div>
     <div class="inner-block my_radio_buttons" id="personDelivery" style="display: none;">
-      <span>Нужна ли вам доставка ?</span>
       <div>
         <label for="deliveryYes">Да</label>
         <input type="radio" name="delivery" value="Да" form="personaForm" id="deliveryYes">
       </div>
       <div>
-        <label for="deliveryNo">Нет(будет самовывоз)</label>
-        <input type="radio" name="delivery" value="Нет(будет самовывоз)" form="personaForm" id="deliveryNo">
+        <label for="deliveryNo">Нет</label>
+        <input type="radio" name="delivery" value="Нет" form="personaForm" id="deliveryNo">
       </div>
     </div>
     <div class="inner-block my_radio_buttons" id="personPrint" style="display: none;">
-      <div style="padding-bottom: 5px;">Нужна ли печать на данных этикетках ?(укажите количество цветов)</div>
+      <div style="padding-bottom: 5px;"></div>
       <div class="my-colors-group">
         <div>
           <label for="printNo">Нет</label>
@@ -95,10 +95,10 @@
     </div>
     <div class="inner-block" id="personData" style="display: none;">
       <form action="" method="post" id="personaForm">
-        <label for="personData">Имя</label><input type="text" name="personName" id="personName" placeholder="Имя"
-                                                  required>
-        <label for="personPhone">Телефон</label><input type="tel" name="personPhone" id="personPhone"
-                                                       placeholder="Телефон" required>
+        <input type="text" name="personName" id="personName" placeholder="Имя" title="Имя"
+               required>
+        <input type="tel" name="personPhone" id="personPhone" title="Телефон"
+               placeholder="Телефон" required>
         <button type="submit" id="personSend">Отправить</button>
       </form>
     </div>
